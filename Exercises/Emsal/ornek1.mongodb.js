@@ -1,16 +1,18 @@
 
-use('kutuphane');
+use('ems_tsmclk');
 
-db.getCollection('kitap').findOne();
-
-veri = {
+/*veri = {
     'ems' : null,
     'spcl' : 40.98,
     'page' :  NumberDecimal('123'),
     'cdv' : 'Babı esrar..'
 }
 
-db.kitap.insertOne(veri)
+db.ems_tsmclk.insertOne(veri)
+*/
+db.getCollection('ems_tsmclk').findOne();
+
+
 
 
 //db.kitap.findOne();

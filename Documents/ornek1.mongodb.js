@@ -14,9 +14,9 @@
 
 // Select the database to use.
 
-use('kutuphane');
+use('taksiapp');
 
-db.getCollection('kitap').findOne();
+
 
 veri = {
     'isbn':null,
@@ -32,3 +32,6 @@ veri = {
         "soyisim":"Anar"
     },
 }
+
+
+db.getCollection('ibrahim').insertOne(veri)

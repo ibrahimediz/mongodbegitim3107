@@ -1,16 +1,19 @@
-use('kutuphane');
+use('taksiapp');
 
-db.getCollection('kitap').findOne();
+db.getCollection('ozge').findOne();
+
+
 
 veri = {
-'isbn' : null,
-'best_seller':true,
-'fiyat':50.25,
-'sayfa':NumberInt("168"),
-'baslik':'Puslu Kıtalar Atlası',
-'baski_tarihi':new Date(),
-'pattern': /\d+/,
-'satin_alan':["Ali",3,"İsmail",5],
-'yazar':{"isim:"İhsan Oktay}
+    'plaka_sorumlusu' : "İhsan Anar",
+    'sorumlu_telefon':"İhsan Oktay",
+    'plaka':"34xx34",
+    'bolge':NumberInt("34"),
+    'km_ucreti':35,
+    'toplam_km':50,
+    'memnuniyet_skoru':70,
+    'yorumlar':["İyi","Kötü"],
+    'baslangıc_tarihi': new Date(),
+    }
 
-}
+db.getCollection('ozge').insertOne(veri);

@@ -4,15 +4,20 @@ db.getCollection('kitap').findOne();
 
 
 veri = {
-    'isbn' : null,
-    'best_seller' : true,
-    'price' : 150.25,
-    'pages' : NumberInt(167),
-    'baski_tarihi' : new Date(),
-    'pattern' : /\d+/,
-    'satin_alan' : ["Ali", "Veli"],
-    'yazar' : {
-        'isim' : 'Ihsan Oktay',
-        'soyisim' : 'Anar'
-    }
+    id : 1,
+    'plaka' : '34MZ20',    
+    'ucret' : 50.25,  
+    'tarih' : new Date(),  
+    'surucu' : {
+        'isim' : 'Ali',
+        'soyisim' : 'Ak'
+    },
+    'yolcu' : {
+        'isim' : 'Ayşe',
+        'soyisim' : 'Kara'
+    },
+    'ratings' : [{
+        'comment' : 'xyz',
+        'rank' : 5
+    }],
 }
