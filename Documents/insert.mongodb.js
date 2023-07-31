@@ -14,11 +14,12 @@
 
 // Select the database to use.
 
-use('taksiapp');
+use('kutuphane');
 
 
 
-veri = {
+dokuman1 = {
+    _id :2,
     'isbn':null,
     'best_seller':true,
     'fiyat':50.25,
@@ -34,4 +35,26 @@ veri = {
 }
 
 
-db.getCollection('ibrahim').insertOne(veri)
+dokuman2 = {
+    _id :4,
+    'isbn':null,
+    'best_seller':true,
+    'fiyat':50.25,
+    'sayfa': NumberInt("168"),
+    'baslik':'Puslu Kıtalar Atlası 2',
+    'baski_tarihi': new Date(),
+    'pattern': /\d+/,
+    'satin_alan':["Ali",3,"İsmail",5],
+    'yazar':{
+        "isim":"İhsan Oktay",
+        "soyisim":"Anar"
+    },
+}
+dokumanlar = [dokuman1,dokuman2]
+
+
+
+// db.getCollection('kitap').insertOne(veri)
+
+db.getCollection('kitap').insertMany(dokumanlar,
+    {ordered:true})

@@ -1,6 +1,6 @@
 use('taksiapp')
 
-veri = {
+veri1 = {
     'id':1000,
     'plaka':"34GS0001",
     'km_fiyat':10,
@@ -10,6 +10,21 @@ veri = {
         "soyisim":"Yılmaz"
     },
 }
-db.getCollection('necmi').insertOne(veri)
+veri2 = {
+    'id':2000,
+    'plaka':"34GS0002",
+    'km_fiyat':10,
+    'lokasyon':'Pendik',
+    'sofor':{
+        "isim":"Ahmet",
+        "soyisim":"Yıldız"
+    },
+}
 
-db.getCollection('necmi').findOne()
+//db.getCollection('necmi').insertOne(veri)
+veriler = [veri1,veri2]
+
+db.getCollection('necmi').insertMany(veriler)
+
+
+db.getCollection('necmi').find()
