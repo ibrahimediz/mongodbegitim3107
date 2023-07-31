@@ -12,4 +12,4 @@ use("sample_guides")
 // id disinda degerlere hata verir
 //db.getCollection("inspections").findOne({"certificate_number":9287088},{"address":1, "business_name":0})
 
-db.getCollection("planets").findOne()
+db.getCollection("planets").findOne({},{_id:0, "orderFromSun":0})
