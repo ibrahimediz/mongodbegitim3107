@@ -42,7 +42,7 @@ use("sample_training");
   }
 }
 */
-// db.getCollection("inspections").findOne({"certificate_number":9287088},{"address":1});
+db.getCollection("inspections").findOne({"certificate_number":9287088},{"adress":1});
 /*
 {
   "_id": {
