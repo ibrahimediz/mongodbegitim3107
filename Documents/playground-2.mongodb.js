@@ -10,6 +10,6 @@
 // https://www.mongodb.com/docs/mongodb-vscode/playgrounds/
 
 // Select the database to use.
-use('sample_analytics');
+use('kutuphane');
 
-db.sales.find();
+db.getCollection('kitap').find();
