@@ -1,25 +1,8 @@
-use("sample_training");
+use("sample_guides");
 //------------------------ findOne # ilk kayıt
-// db.getCollection("inspections").findOne();
-/* 
-{
-  "_id": {
-    "$oid": "56d61033a378eccde8a8354f"
-  },
-  "id": "10021-2015-ENFO",
-  "certificate_number": 9278806,
-  "business_name": "ATLIXCO DELI GROCERY INC.",
-  "date": "Feb 20 2015",
-  "result": "No Violation Issued",
-  "sector": "Cigarette Retail Dealer - 127",
-  "address": {
-    "city": "RIDGEWOOD",
-    "zip": 11385,
-    "street": "MENAHAN ST",
-    "number": 1712
-  }
-}
-*/
+ db.getCollection("inspections").findOne();
+
+
 
 // db.getCollection("inspections").findOne({_id:ObjectId("56d61033a378eccde8a8354f")});
 /*
