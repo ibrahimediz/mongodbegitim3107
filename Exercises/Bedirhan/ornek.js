@@ -1,3 +1,3 @@
 /* global use, db */
 
-use('sale');
+use('sample_analytics');

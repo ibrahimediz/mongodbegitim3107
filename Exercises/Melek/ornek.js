@@ -1,3 +1,3 @@
 /* global use, db */
 
-use('mongodbVSCodePlaygroundDB');
+use('mongodbVS');
