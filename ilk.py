@@ -1,4 +1,4 @@
-liste = ["AliGalip","Bedirhan","Emsal","EnesAlper","HilalAltinbas","Ilker","Melek","Melih","Muzeyyen","Necmi","Ozge","Sinan","Suat"]
+liste = ["AliGalip","Bedirhan","Emsal","EnesAlper","Cevaplar","HilalAltinbas","Ilker","Melek","Melih","Muzeyyen","Necmi","Ozge","Sinan","Suat"]
 import os
 import shutil
 for item in liste:
@@ -6,4 +6,5 @@ for item in liste:
         os.mkdir(os.path.join("Exercises",item))
     source = "/workspace/mongodbegitim3107/Documents/ornek.js"
     destination = os.path.join("Exercises",item,"ornek.js")
-    shutil.copy(source,destination)
+    if not os.path.exists(os.path.join("Exercises",item,"ornek.js")):
+        shutil.copy(source,destination)
