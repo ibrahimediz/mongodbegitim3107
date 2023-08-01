@@ -35,12 +35,24 @@
 //)
 
 //or
-db.getCollection("urunler").find({
+//db.getCollection("urunler").find({
+//    $and:[
+//        {price:899
+//        },{
+//            color:{$in:["white","black"]}
+//        }]
+//    },
+//   {name:1,price:1,color:1}
+//    )
+
+use("sample_airbnb")
+
+db.getCollection("listingsAndReviews").find()
+//db.getCollection("listingsAndReviews").find(
+  // {
     $and:[
-        {price:899
-        },{
-            color:{$in:["white","black"]}
-        }]
-    },
-   {name:1,price:1,color:1}
-    )
+        {images}
+    ]
+//
+  // } 
+//)

@@ -18,10 +18,14 @@
 );
  */
 
-databaseName = "sample_analytics"
-collectionName = "accounts"
+databaseName = "sample_airbnb"
+collectionName = "listingsAndReviews"
 
 use(databaseName);
 
-db.getCollection().find();
+db.getCollection(collectionName).find(
+    {
+        $nin:[{images}]
+    }
+);
 
