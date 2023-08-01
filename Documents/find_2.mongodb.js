@@ -50,7 +50,7 @@ use(databaseName);
 
 
 //##################################################
-// subdocument içerisinde projection kullanımı 
+// embeded document ve arrayler  içerisinde projection kullanımı 
 //----------------------------------------
 /* Bu durumu gözlemlemek için veri tabanı içerisinde bir kaç veri aktaralım 
 db.getCollection("urunler").insertMany([
@@ -60,4 +60,34 @@ db.getCollection("urunler").insertMany([
     { "_id" : 4, "name" : "SmartPad", "price" : 699, "releaseDate": ISODate("2020-05-14"),"spec" : { "ram" : 8, "screen" : 9.7, "cpu" : 1.66 },"color":["white","orange","gold","gray"],"storage":[128,256,1024],"inventory":[{ qty: 1200,"warehouse": "San Mateo"}]},
     { "_id" : 5, "name" : "SmartPhone", "price" : 599,"releaseDate": ISODate("2022-09-14"), "spec" : { "ram" : 4, "screen" : 5.7, "cpu" : 1.66 },"color":["white","orange","gold","gray"],"storage":[128,256]}
  ])*/
+// db.getCollection("urunler").find({},{name:1,price:1,"spec.ram":1})
+// db.getCollection("urunler").find({},{name:1,price:1,spec:{ram:1}});
+
+// db.getCollection("urunler").find({},{name:1,"inventory.qty":1})
+// db.getCollection("urunler").find({},{name:1,inventory:{qty:1}});
+
 //##################################################
+
+
+
+//##################################################
+// $eq kullanımı
+//----------------------------------------
+// db.getCollection("urunler").find({price:{$eq:899}},{})
+// db.getCollection("urunler").find({"spec.ram":{$eq:4}},{})
+// db.getCollection("urunler").find({color:{$eq:"black"}},{})
+// db.getCollection("urunler").find({releaseDate:{$eq:new ISODate("2020-05-14")}},{})
+//##################################################
+
+
+//##################################################
+// $gt büyüktür
+// $gte büyük eşit
+// $lt küçüktür
+// $lte küçük eşit
+//----------------------------------------
+// db.getCollection("urunler").find({price:{$gt:699}},{name:1,price:1})
+// db.getCollection("urunler").find({price:{$lt:699}},{name:1,price:1})
+// db.getCollection("urunler").find({"spec.ram":{$gt:8}},{name:1,price:1,spec:{ram:1}})
+// db.getCollection("urunler").find({"spec.ram":{$gte:8}},{name:1,price:1,spec:{ram:1}})
+// db.getCollection("urunler").find({storage:{$gt:128}},{name:1,price:1,storage:1})

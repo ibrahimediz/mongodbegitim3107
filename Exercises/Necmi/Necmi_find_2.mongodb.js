@@ -2,4 +2,4 @@
 use('kutuphane')
 
 
-db.getCollection("kitaplar").find({"categories":"mobile"},{_id:0,"orderFromSun":0})
+db.getCollection("kitaplar").find({"categories":"Mobile"},{_id:0,"isbn":1,"categories":1})

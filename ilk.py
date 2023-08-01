@@ -19,3 +19,14 @@ for item in liste:
         destination = os.path.join("Exercises",item,"ornek.js")
         if not os.path.exists(os.path.join("Exercises",item,"ornek.js")):
             shutil.copy(source,destination)
+
+
+# class A:
+#     def __init__(self,a):
+#         self.a = a
+
+#     def __gt__(self,obj):
+#         return self.a > obj.a
+# var1 = A(1)
+# var2 = A(2)
+# print(var1>var2)
