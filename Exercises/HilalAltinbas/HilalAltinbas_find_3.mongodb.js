@@ -24,8 +24,8 @@ kayıtların listelenmesi
 
 db.getCollection(collectionName).find{
     $and:[{
-        limit:{$gte:10000},
-        products:{ $in:["InvestmentStock","Derivatives"]}
+        image:{$exists:false},
+        minimum_nights:{$eq:1}
     }]
 
 

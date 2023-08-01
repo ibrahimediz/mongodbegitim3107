@@ -29,4 +29,4 @@ collectionName = "listingsAndReviews"
 
 use(databaseName);
 
-db.getCollection(collectionName).find({$and:[{}{}]})
+db.getCollection(collectionName).find({$and:[{"image"},{"minimum_nights" :1}]})
