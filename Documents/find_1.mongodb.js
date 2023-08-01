@@ -1,3 +1,8 @@
+/*
+-----------------------------------------
+db.getCollection("colName").findOne(query,projection)
+-----------------------------------------
+*/
 use("sample_training");
 //------------------------ findOne # ilk kayıt
 // db.getCollection("inspections").findOne();
@@ -42,7 +47,7 @@ use("sample_training");
   }
 }
 */
-db.getCollection("inspections").findOne({"certificate_number":9287088},{"adress":1});
+// db.getCollection("inspections").findOne({"certificate_number":9287088},{"adress":1});
 /*
 {
   "_id": {
