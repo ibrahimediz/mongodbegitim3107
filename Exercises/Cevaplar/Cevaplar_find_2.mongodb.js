@@ -17,3 +17,4 @@ kutuphane veri tabanı içerisinde yer alan urunler koleksiyonunda
 3. storage alanında 256 dan büyük olan verilerin name ve storage alanının listelenmesi
 
 */
+use("kutuphane");

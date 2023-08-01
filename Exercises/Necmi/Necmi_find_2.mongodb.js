@@ -2,4 +2,11 @@
 use('kutuphane')
 
 
-db.getCollection("kitaplar").find({"categories":"Mobile"},{_id:0,"isbn":1,"categories":1})
+db.getCollection('urunler').find({price:{$lt:899}},{name:1,price:1});
+
+//db.getCollection('urunler').find({"spec.ram":{$gt:6}},{spec:{ram:1},name:1});
+//db.getCollection('urunler').find({storage:{$gt:256}},{name:1,storage:1});
+
+
+//db.getCollection("urunler").find({},{})
+//db.getCollection("urunler").find("price",{$lt:899},{name:1,price:1})

@@ -20,7 +20,12 @@ use("kutuphane")
 //db.getCollection("urunler").find({color:{$eq:"black"}},{})
 //date 
 //db.getCollection("urunler").find({releaseDate:{$eq:new ISODate("2020-05-14")}},{})
-//
+//1
+db.getCollection("urunler").find({price:{$lt:899}},{name:1,price:1})
+//2
+db.getCollection("urunler").find({"spec.ram":{$gt:6}},{"spec.ram":1,price:1})
+//3
+db.getCollection("urunler").find({storage:{$gt:256}},{name:1,storage:1})
 
 
 
