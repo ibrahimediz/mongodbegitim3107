@@ -30,6 +30,5 @@ db.getCollection(collectionName).find(
     }
 )
 
-db.getCollection(collectionName).findOne()
 
 
