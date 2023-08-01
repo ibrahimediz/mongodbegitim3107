@@ -74,8 +74,8 @@
 //    }
 //}])
 
-databaseName = "sample_airbnb"
-collectionName = "listingsAndReviews"
 
-use(databaseName)
+
+
+
 

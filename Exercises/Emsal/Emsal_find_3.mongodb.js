@@ -29,12 +29,18 @@
     
 );/ */
 
-databaseName = "sample_airbnb"
-collectionName = "listingsAndReviews"
-
-use(databaseName);
-
+/*
 db.getCollection(collectionName).find(
     {cancellation_policy:{$type:"string"}}
     
-);
+);*/
+databaseName = "sample_guides"
+collectionName = "planets"
+
+use(databaseName);
+db.getCollection(collectionName).find({
+    mainAtmosphere : {$type: "array",$size:3}
+
+});
+
+
