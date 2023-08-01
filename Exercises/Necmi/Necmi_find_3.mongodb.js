@@ -1,14 +1,8 @@
 use('sample_airbnb')
 
 db.getCollection("listingsAndReviews").find({
-    
+    $and:[{
+        image:{$exists:false},
+        minumum_nights:{$eq:"2"},
+    }]
 })
-
-//$and:[
-//    {limit:{
-//        $gte:10000
-//    }},
-//    {products:{
-//        $in:["InvestmentStock","Derivatives"]}
-//    }
-//]

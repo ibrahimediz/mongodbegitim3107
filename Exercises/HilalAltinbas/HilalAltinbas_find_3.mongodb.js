@@ -22,11 +22,9 @@ image başlığı olmayan kayıtların ve minimum_nights başlığının 1 e eş
 kayıtların listelenmesi
 */
 
-db.getCollection(collectionName).find{
+db.getCollection(collectionName).find({
     $and:[{
         image:{$exists:false},
-        minimum_nights:{$eq:1}
+        minimum_nights:{$eq:"1"}
     }]
-
-
-}
+});

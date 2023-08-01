@@ -21,3 +21,15 @@
 image başlığı olmayan kayıtların ve minimum_nights başlığının 1 e eşit olduğu
 kayıtların listelenmesi
 */
+
+databaseName = "sample_airbnb"
+collectionName = "listingsAndReviews" 
+
+
+use(databaseName)
+db.getCollection(collectionName).find({
+    $and:[{
+        image:{$exists:false},
+        minimum_nights:{$eq:"2"}
+    }]
+});

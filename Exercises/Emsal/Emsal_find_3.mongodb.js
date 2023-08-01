@@ -24,10 +24,10 @@ collectionName = "listingsAndReviews"
 use(databaseName);
 
 db.getCollection(collectionName).find(
-    {$and:[{  
-        $nin:[{images}],
-    {}}
-
-]}
+    {$and:[{
+        images: {$exists: fasle},
+        minimum_nights : {$eg:1}
+    }]}
+    
 );
 

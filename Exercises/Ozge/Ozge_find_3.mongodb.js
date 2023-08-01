@@ -47,12 +47,14 @@
 
 use("sample_airbnb")
 
-db.getCollection("listingsAndReviews").find()
-//db.getCollection("listingsAndReviews").find(
-  // {
-    $and:[
-        {images}
-    ]
-//
-  // } 
-//)
+//db.getCollection("listingsAndReviews").find()
+db.getCollection("listingsAndReviews").find(
+    {
+    $and:[{
+        images:{$exists:false},
+        minimum_nights:{$eq:"1"}
+        }
+        ]
+  } 
+)
+
