@@ -30,6 +30,6 @@ collectionName = "listingsAndReviews"
 use(databaseName);
 
 db.getCollection(collectionName)
-.find({$and:[{image:{$exists:false}},
-             {"minimum_nights" : {$eq:"1"}}
+.find({$and:[{image: {$exists:false}},
+             {minimum_nights: {$eq:"1"}}
             ]})

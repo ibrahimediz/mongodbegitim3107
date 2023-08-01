@@ -45,16 +45,37 @@
 //   {name:1,price:1,color:1}
 //    )
 
-use("sample_airbnb")
+//use("sample_airbnb")
 
 //db.getCollection("listingsAndReviews").find()
-db.getCollection("listingsAndReviews").find(
-    {
-    $and:[{
-        images:{$exists:false},
-        minimum_nights:{$eq:"1"}
-        }
-        ]
-  } 
-)
+//db.getCollection("listingsAndReviews").find(
+//    {
+//    $and:[{
+//        images:{$exists:false},
+//        minimum_nights:{$eq:"1"}
+//        }
+//        ]
+//  } 
+//)
+
+//databaseName = "sample_airbnb"
+//collectionName = "listingsAndReviews"
+
+//use(databaseName)
+//db.getCollection(collectionName).find(
+//    {
+//        notes:{$type:["string"]}
+//    }
+//)
+
+//db.collectionName.aggregate([{
+//    $project: {
+//        notes : { $type: "$notes" }
+//    }
+//}])
+
+databaseName = "sample_airbnb"
+collectionName = "listingsAndReviews"
+
+use(databaseName)
 

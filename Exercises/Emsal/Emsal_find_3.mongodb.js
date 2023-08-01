@@ -18,16 +18,23 @@
 );
  */
 
+
+
+/**
+ * db.getCollection(collectionName).find(
+    {$and:[{
+        images:{$exists:true},
+        minimum_nights:{$eq:"1"}
+    }]}
+    
+);/ */
+
 databaseName = "sample_airbnb"
 collectionName = "listingsAndReviews"
 
 use(databaseName);
 
 db.getCollection(collectionName).find(
-    {$and:[{
-        images: {$exists: fasle},
-        minimum_nights : {$eg:1}
-    }]}
+    {cancellation_policy:{$type:"string"}}
     
 );
-
