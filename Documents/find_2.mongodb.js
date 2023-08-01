@@ -1,7 +1,12 @@
 databaseName = "kutuphane"
 collectionName = "kitaplar"
 
-
+// find
+/*
+-----------------------------------------
+db.getCollection("colName").find(query,projection)
+-----------------------------------------
+*/
 use(databaseName);
 // db.getCollection(collectionName).insertMany([
 // 	{ "_id" : 1, "title" : "Unlocking Android", "isbn" : "1933988673", "categories" : [ "Open Source", "Mobile" ] },
@@ -36,8 +41,8 @@ use(databaseName);
 // ]);
 
 
- db.getCollection(collectionName).find({"categories":"Mobile"},
- {_id:0,"isbn":1,"categories":1});
+// db.getCollection(collectionName).find({"categories":"Java"},
+// {_id:0,"title":1,"isbn":1,"categories":1})
 
-//db.getCollection(collectionName).find({"categories":{$eq:"Mobile"}},
-//{_id:0,"isbn":1,"categories":1});
+db.getCollection(collectionName).find({"categories":{$eq:"Java"}},
+{_id:0,"title":1,"isbn":1,"categories":1})
