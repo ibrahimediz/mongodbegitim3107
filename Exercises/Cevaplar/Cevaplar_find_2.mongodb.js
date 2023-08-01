@@ -18,3 +18,9 @@ kutuphane veri tabanı içerisinde yer alan urunler koleksiyonunda
 
 */
 use("kutuphane");
+// 1.
+// db.getCollection("urunler").find({price:{$lt:899}},{name:1,price:1})
+// 2. 
+// db.getCollection("urunler").find({"spec.ram":{$gt:6}},{name:1,spec:{ram:1}})
+// 3. 
+// db.getCollection("urunler").find({"storage":{$gt:256}},{name:1,storage:1})

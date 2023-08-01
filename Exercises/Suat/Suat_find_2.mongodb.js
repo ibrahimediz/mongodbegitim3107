@@ -19,10 +19,15 @@ kutuphane veri tabanı içerisinde yer alan urunler koleksiyonunda
 */
 
 databaseName = "kutuphane"
-collectionName = "kitaplar"
+collectionName = "urunler"
 
 use(databaseName);
 
-db.getCollection("urunler").find({price:{$lt:899}},{name:1,price:1})
+//1.
+//db.getCollection("urunler").find({price:{$lt:899}},{name:1,price:1})
 
-//db.getCollection(collectionName).find({"spec.ram":{$gt:6}},{"spec.ram":1, "name":1})
+//2.
+db.getCollection(collectionName).find({"spec.ram":{$gt:6}},{spec:{ram:1}, name:1})
+
+//3.
+db.getCollection(collectionName).find({"spec.ram":{$gt:6}},{spec:{ram:1}, name:1})
