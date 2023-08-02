@@ -11,7 +11,7 @@ import shutil
 for item in liste:
     if not os.path.exists(os.path.join("Exercises",item)):
         os.mkdir(os.path.join("Exercises",item))
-    fileName = f"{item}_updateOne.mongodb.js"
+    fileName = f"{item}_updateMany.mongodb.js"
     if not os.path.exists(os.path.join("workspace","mongodbegitim3107","Documents",fileName)):
         open(os.path.join("Exercises",item,fileName),"w+")
     else:

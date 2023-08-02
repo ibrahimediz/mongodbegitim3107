@@ -10,8 +10,12 @@ db.getCollection(collectionName).updateOne(
    {
        $set:{
            kahve:"Quortado",
-           "boyut": "grandy",
-           fiyat: 0
+           boyut: "grandy",
+           fiyat: 0,
+           yer: "İzmir",
+       },
+       $push:{
+            kupon:4
        }
    }
    )

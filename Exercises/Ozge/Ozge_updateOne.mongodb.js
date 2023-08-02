@@ -16,7 +16,6 @@ databaseName ="kutuphane"
 collectionName = "kahve"
 use(databaseName)
 
-db.getCollection(collectionName).find({isim:"Ozge"})
 
 //olmayan field eklenir
 //db.getCollection(collectionName).updateMany(
@@ -65,16 +64,15 @@ db.getCollection(collectionName).find({isim:"Ozge"})
 //    }}
 //)
 
+db.getCollection(collectionName).find({isim:"Ozge"})
+
 db.getCollection(collectionName).updateOne(
     {isim:"Ozge"},
     {$set:{
         yer:"Ankara"
-          }
+          },
       $push:{
         kupon:4
-          }
-      $inc:{
-        miktar:2
           }
         }
 )
