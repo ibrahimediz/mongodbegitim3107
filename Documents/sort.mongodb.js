@@ -43,3 +43,7 @@ use(databaseName)
 //     ).sort({
 //         "spec.ram":1
 //     })
+
+
+// mongodb+srv://dbuser:dbuser123@garantibbva.nuggick.mongodb.net/
+
