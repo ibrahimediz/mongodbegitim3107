@@ -5,7 +5,7 @@ db = client["kutuphane"]
 col = db["kahve"]
 liste = ["AliGalip","Bedirhan","Emsal","EnesAlper","Cevaplar","HilalAltinbas","Ilker",
 "Melek","Melih","Muzeyyen","Necmi","Ozge","Sinan","Suat"]
-kahveismi = ["Caramel Machiato","Quortado","Americano","Latte","Cappucino","Espresso","Türk Kahvesi"]
+kahveismi = ["Caramel Machiato","Quortado","Americano","Latte","Cappucino","Espresso","Türk Kahvesi","Tea","Chai Tea Latte"]
 for i in range(1,len(liste)*4):
     data = {"isim":random.choice(liste),
     "kahve":random.choice(kahveismi),

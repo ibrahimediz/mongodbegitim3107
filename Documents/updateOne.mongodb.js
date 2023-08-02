@@ -26,3 +26,22 @@ db.getCollection(collectionName).updateOne(
     }
     )
 // db.getCollection(collectionName).find(
+
+// Örnek 
+databaseName = "kutuphane"
+collectionName = "kahve"
+use(databaseName)
+db.getCollection(collectionName).find({isim:"Cevaplar"})
+// db.getCollection(collectionName).updateOne(
+//     {_id:ObjectId("64ca0d9158aa0b494cf1358b")},
+//     {
+//         $set:{
+//             yer:"Ankara"
+//         },
+//         $push:{
+//             kupon:4
+//         },
+//         $inc:{
+//             miktar:2
+//         }
+//     })
