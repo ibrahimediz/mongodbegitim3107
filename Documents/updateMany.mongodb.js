@@ -10,3 +10,4 @@ db.getCollection(collectionName).updateMany(
         $set:{langugage:"TR"}
     }
     )
+

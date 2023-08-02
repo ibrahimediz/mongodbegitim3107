@@ -107,3 +107,55 @@ $push
 //     }
 //     )
 // ###############################
+
+
+
+
+// ###############################
+// $unset
+// --------------------
+// databaseName = "kutuphane"
+// collectionName = "kahve"
+// use(databaseName)
+// db.getCollection(collectionName).find({"isim":"Cevaplar1111"})
+// db.getCollection(collectionName).updateOne(
+//     {_id:ObjectId("64ca3518ebf5ff3366e48af6")},
+//     {
+//         $unset:{price:"","icerik.sut":"","kupon.4":""}
+//     }
+//     )
+// ###############################
+
+
+
+// ###############################
+// $rename
+// --------------------
+// databaseName = "kutuphane"
+// collectionName = "kahve"
+// use(databaseName)
+// db.getCollection(collectionName).find({"name":"Cevaplar1111"})
+// db.getCollection(collectionName).updateOne(
+//     {_id:ObjectId("64ca3518ebf5ff3366e48af6")},
+//     {
+//         $rename:{"isim":"name"}
+//     }
+//     )
+// ###############################
+
+
+
+// ###############################
+// $pull
+// --------------------
+// databaseName = "kutuphane"
+// collectionName = "kahve"
+// use(databaseName)
+// db.getCollection(collectionName).find({"name":"Cevaplar1111"})
+// db.getCollection(collectionName).updateOne(
+//     {_id:ObjectId("64ca3518ebf5ff3366e48af6")},
+//     {
+//         $pull:{"kupon":null}
+//     }
+//     )
+// ###############################
