@@ -34,7 +34,12 @@ def mongodbHazirlik(databaseName,
     collectionName,
     connectionString="mongodb+srv://dbuser:dbuser123@garantibbva.nuggick.mongodb.net/?retryWrites=true&w=majority"):
     """
-    verilen veritabanı ismi ve koleksiyon ismine uygun olarak bağlantı metninde yer alan clusterda koleksiyonu açıp geri döner
+    ------------------------------------------------------
+    verilen veritabanı ismi ve koleksiyon ismine uygun 
+    olarak bağlantı metninde yer alan clusterda koleksiyonu 
+    açıp geri döner
+    ------------------------------------------------------
+
     """
     cli = client(connectionString)
     # print(cli.list_database_names())
