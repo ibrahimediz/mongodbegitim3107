@@ -19,7 +19,7 @@ db.getCollection(collectionName).find({},{})
 yukarıdaki bilgileri kullanarak siparişler arasında Americanos siparişlerinde boyutlarına göre kaç sipariş verilmiştir
 büyükten küçüğe doğru sıralanmış bir şekilde listeleyelim.
 
-*/
+
 
 db.getCollection(collectionName).aggregate(
     {
@@ -29,9 +29,14 @@ db.getCollection(collectionName).aggregate(
         siparisSum: {$sum:"$quantity"}
     }},
      {$sort:{siparisSum:-1}}
-)
+)*/
 
+/* 
+yukarıda bulunan sorguyu kullanarak 
+ortalama tutarı 150 den büyük olan siparişleri 
+küçükten büyüğe sıralayacak şekilde listeleyelim
 
+*/
 
 db.getCollection(collectionName).aggregate(
     {
@@ -43,11 +48,11 @@ db.getCollection(collectionName).aggregate(
         }
     },
     {
-        //         $match:{
-        //             ucret:{$lte:400}
-        //         }
-        //     },
-        //     {
-        //         $sort:{ucret:-1}
-        //     }
+                 $match:{
+                    ortalamaSayi:{$gt:150}
+                 }
+             },
+             {
+                 $sort:{ortalamaSayi:1}
+             }
 )

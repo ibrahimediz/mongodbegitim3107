@@ -107,6 +107,47 @@ use(databaseName)
 // )
 
 
+// databaseName = "coffeeshop"
+// collectionName = "sales"
+// use(databaseName)
+
+// db.getCollection(collectionName).aggregate(
+//     {
+//         $group:{
+//             _id:"$item",
+//             ortalamaTutar:{
+//                 $avg:{$multiply:["$quantity","$price"]}
+//             }
+//         }
+//     },
+// )
+/* 
+yukarıda bulunan sorguyu kullanarak 
+ortalama tutarı 150 den büyük olan siparişleri 
+küçükten büyüğe sıralayacak şekilde listeleyelim
+
+*/
+// db.getCollection(collectionName).aggregate(
+//     {
+//         $group:{
+//             _id:"$item",
+//             ortalamaTutar:{
+//                 $avg:{$multiply:["$quantity","$price"]}
+//             }
+//         }
+//     },
+//     {
+//         $match:{
+//         ortalamaTutar:{$gt:150}
+//     }
+//     },
+//     {
+//         $sort:{ortalamaTutar:1}
+//     }
+// )
+
+
+
 databaseName = "coffeeshop"
 collectionName = "sales"
 use(databaseName)
@@ -115,15 +156,12 @@ db.getCollection(collectionName).aggregate(
     {
         $group:{
             _id:"$item",
-            ortalamaTutar:{
-                $avg:{$multiply:["$quantity","$price"]}
+            minQty:{
+                $min:"$quantity"
+            },
+            maxQty:{
+                $max:"$price"
             }
         }
     },
 )
-/* 
-yukarıda bulunan sorguyu kullanarak 
-ortalama tutarı 150 den büyük olan siparişleri 
-küçükten büyüğe sıralayacak şekilde listeleyelim
-
-*/

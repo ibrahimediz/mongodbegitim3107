@@ -41,17 +41,6 @@ db.getCollection(collectionName).aggregate( // from
 
 */
 
-,
-//     {
-//         $match:{
-//             ucret:{$lte:400}
-//         }
-//     },
-//     {
-//         $sort:{ucret:-1}
-//     }
-
-
 db.getCollection(collectionName).aggregate(
     {
         $group:{
@@ -61,6 +50,16 @@ db.getCollection(collectionName).aggregate(
             }
         }
     },
+    {
+         $match:{
+            ortalamaTutar:{$gt:150}
+        }
+     }
+     ,
+     {
+        $sort:{ortalamaTutar:1}
+     }
+    
 )
 /* 
 yukarıda bulunan sorguyu kullanarak 
