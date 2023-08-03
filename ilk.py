@@ -11,13 +11,14 @@ import shutil
 for item in liste:
     if not os.path.exists(os.path.join("Exercises",item)):
         os.mkdir(os.path.join("Exercises",item))
-    fileName = f"{item}_aggregate2.mongodb.js"
+    # fileName = f"{item}_aggregate2.mongodb.js"
+    fileName = f"{item}_aggregate.py"
     if not os.path.exists(os.path.join("workspace","mongodbegitim3107","Documents",fileName)):
         open(os.path.join("Exercises",item,fileName),"w+")
     else:
         source = f"/workspace/mongodbegitim3107/Documents/{fileName}"
-        destination = os.path.join("Exercises",item,"ornek.js")
-        if not os.path.exists(os.path.join("Exercises",item,"ornek.js")):
+        destination = os.path.join("Exercises",item,fileName)
+        if not os.path.exists(os.path.join("Exercises",item,fileName)):
             shutil.copy(source,destination)
         
 
